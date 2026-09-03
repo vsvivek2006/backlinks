@@ -170,14 +170,14 @@ export default function Header() {
               : 'max-h-0 opacity-0 invisible'
           }`}
         >
-          <div className="fixed inset-x-0 top-16 lg:top-20 bottom-0 bg-navy-800/98 backdrop-blur-xl overflow-y-auto">
+          <div className="fixed inset-x-0 top-16 lg:top-20 bottom-0 overflow-y-auto" style={{ backgroundColor: '#111834' }}>
             <div className="container-x px-4 py-6">
               <nav className="flex flex-col gap-1">
                 {NAV_LINKS.map((link) => (
-                  <div key={link.label} className="border-b border-white/5 last:border-0">
+                  <div key={link.label} className="border-b border-white/10 last:border-0">
                     <Link
                       to={link.to}
-                      className="block rounded-lg px-4 py-4 text-base font-medium text-navy-100 transition-colors hover:bg-white/10 hover:text-white"
+                      className="block rounded-lg px-4 py-4 text-base font-medium text-white transition-colors hover:bg-white/10 hover:text-white"
                       onClick={() => setMobileOpen(false)}
                     >
                       {link.label}
@@ -188,7 +188,7 @@ export default function Header() {
                           <Link
                             key={item.to}
                             to={item.to}
-                            className="block rounded-lg px-3 py-2.5 text-sm font-medium text-navy-300 transition-colors hover:text-white hover:bg-white/5"
+                            className="block rounded-lg px-3 py-2.5 text-sm font-medium text-white/80 transition-colors hover:text-white hover:bg-white/5"
                             onClick={() => setMobileOpen(false)}
                           >
                             {item.label}
@@ -230,10 +230,10 @@ export default function Header() {
       </header>
 
       {/* Sticky Mobile Bottom CTA - Only visible on mobile */}
-      <div className="fixed inset-x-0 bottom-0 z-40 flex items-center gap-2 border-t border-navy-100 bg-white/95 p-2 backdrop-blur-lg shadow-lg lg:hidden">
+      <div className="fixed inset-x-0 bottom-0 z-40 flex items-center gap-2 border-t border-white/10 bg-[#111834] p-2 backdrop-blur-lg shadow-lg lg:hidden">
         <a
           href={`tel:${SITE.phone}`}
-          className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-navy-800 px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-navy-700"
+          className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-white/10 px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/20"
         >
           <Phone className="h-4 w-4" /> Call
         </a>
