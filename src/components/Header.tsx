@@ -171,7 +171,7 @@ export default function Header() {
           }`}
         >
           <div className="fixed inset-x-0 top-16 lg:top-20 bottom-0 overflow-y-auto" style={{ backgroundColor: '#111834' }}>
-            <div className="container-x px-4 py-6">
+           <div className="container-x px-4 py-6 bg-[#0b123e]">
               <nav className="flex flex-col gap-1">
                 {NAV_LINKS.map((link) => (
                   <div key={link.label} className="border-b border-white/10 last:border-0">
